@@ -136,6 +136,47 @@ $('.select2').select2({
   tags: true
 });
 
+var oe=["CREAR SUCURSALES EN DISTINTAS UNIVERSIDADES","APLICAR LA RESPONSABILIDAD SOCIAL","MANTENER EL CRECIMIENTO ECONOMICO DE LA EMPRESA","AMPLIAR LA OFERTA DE PRODUCTOS Y SERVICIOS","MEJORAR LA CAPACIDAD OPERATIVA","DISMINUIR EL TIEMPO DE ESPERA DE LOS CLIENTES.","AUMENTAR LAS OPCIONES DE COMPRA DE LOS CLIENTES.","OBTENER CONFIANZA  DE LOS CLIENTES PARA CONSEGUIR FIDELIZARLOS.","INFORMAR A LOS CLIENTES LA CANTIDAD DE PRODUCTOS EN STOCK.","MANTENER UN CONTROL AUTOMATIZADO DEL INVENTARIO.","CONSERVAR UN BUEN AMBIENTE LABORAL Y ESPIRITU DE TRABAJO.","CONSERVAR DE UNA MEJOR MANERA LOS INSUMOS PERECIBLES.","LOGRAR FIDELIZAR A NUESTROS PROVEEDORES.","DAR A CONOCER LAS OFERTAS DEL NEGOCIO.","DIFERENCIACIÓN DE LOS COMPETIDORES."];
+var pr=["DESARROLLAR UN PLAN DE INVERSIONES PARA CREAR SUCURSALES DE LA CAFETERIA EN OTRAS UNIVERSIDADES","DISEÑAR UNA NUEVA CARTA (MENÚ), EN FUNCION A LAS NECESIDADES DEL CLIENTE","CONSEGUIR PATROCINADORES","PROMOCIONAR LOS PRODUCTOS YA EXISTENTES","CREAR LOS LINEAMIENTOS NECESARIOS PARA APLICAR LA RESPONSABILIDAD SOCIAL DE LA EMPRESA","PONER EN PRACTICA LOS LINEAMIENTOS DISEÑADOS","CREAR UN PROGRAMA QUE INCREMENTE EL INGRESO DE LA EMPRESA SIN DESCUIDAR SU ROL SOCIAL","RACIONALIZAR LOS COSTOS OPERATIVOS","EMPLEAR EFICAZMENTE LA GESTION DE LOS RECURSOS","EVALUAR LOS CONVENIOS CON LOS PATROCINADORES","OPTIMIZAR LA VENTA DE PRODUCTOS Y SERVICIOS EXISTENTES","RENTABILZIAR LOS CONVENIOS CON LOS PATROCINADORES","IMPLEMENTAR TARJETA PROPIA DE LA EMPRESA (CAFETERIA)","REMODELAR LA CAFETERIA","CAPACITACION AL PERSONAL QUE LABORA EN LAS SEDES DE LA CAFETERIA","REALIZAR ESTUDIOS E IMPLEMENTAR UN SISTEMA QUE AGILICE LAS COLAS","IMPLEMENTAR DISPOSITIVOS QUE AGILICEN EL PROCESO DE COMPRA (TABLET, ETC)","IMPLEMENTAR VARIOS MODULOS APTOS PARA EL USO DE DISPOSITIVOS MOVILES QUE SIRVEN EN EL PROCESO DE COMPRA.","MOSTRAR EL MENU DEL DIA O ALGUN PRODUCTO NUEVO EN PANTALLAS AL INTERIOR DE LA CAFETERIA.","OFRECERLES UN TICKET CON DATOS DE LA COMPRA REALIZADA, SOLICITANDO SU NOMBRE PARA QUE PUEDA SER UBICADO AL MOMENTO DE LA ENTREGA.","IMPLEMENTAR CARTILLAS O INFORMACION DE PRODUCTOS DISPONIBLES A TRAVES DE DISPOSITIVOS MOVILES COMO TABLET, O MONITORES."]
+/*OBJ: crear sucursales en distintas universidades
+- desarrollar un plan de inversiones para crear sucursales de la cafeteria en otras universidades
+- diseñar una nueva carta (menú), en funcion a las necesidades del cliente
+- conseguir patrocinadores
+- promocionar los productos ya existentes
+
+OBJ: Aplicar la responsabilidad social
+- Crear los lineamientos necesarios para aplicar la responsabilidad social de la empresa
+- poner en practica los lineamientos diseñados
+
+OBJ: Mantener el crecimiento economico de la empresa
+- Crear un programa que incremente el ingreso de la empresa sin descuidar su rol social.
+- racionalizar los costos operativos
+- emplear eficazmente la gestion de los recursos
+- Evaluar los convenios con los patrocinadores
+
+OBJ: ampliar la oferta de productos y servicios
+- optimizar la venta de productos y servicios existentes
+- rentabilziar los convenios con los patrocinadores
+- implementar tarjeta propia de la empresa (cafeteria)
+
+obj: mejorar la capacidad operativa
+- remodelar la cafeteria
+- capacitacion al personal que labora en las sedes de la cafeteria
+- realizar estudios e implementar un sistema que agilice las colas
+ESTRATEGIAS:
+
+- DISMINUIR EL TIEMPO DE ESPERA DE LOS CLIENTES. 
+- AUMENTAR LAS OPCIONES DE COMPRA DE LOS CLIENTES.
+- OBTENER CONFIANZA  DE LOS CLIENTES PARA CONSEGUIR FIDELIZARLOS.
+- INFORMAR A LOS CLIENTES LA CANTIDAD DE PRODUCTOS EN STOCK.
+
+
+PROYECTOS:
+- IMPLEMENTAR DISPOSITIVOS QUE AGILICEN EL PROCESO DE COMPRA (TABLET, ETC)
+- IMPLEMENTAR VARIOS MODULOS APTOS PARA EL USO DE DISPOSITIVOS MOVILES QUE SIRVEN EN EL PROCESO DE COMPRA.
+- MOSTRAR EL MENU DEL DIA O ALGUN PRODUCTO NUEVO EN PANTALLAS AL INTERIOR DE LA CAFETERIA.
+- OFRECERLES UN TICKET CON DATOS DE LA COMPRA REALIZADA, SOLICITANDO SU NOMBRE PARA QUE PUEDA SER UBICADO AL MOMENTO DE LA ENTREGA.
+- IMPLEMENTAR CARTILLAS O INFORMACION DE PRODUCTOS DISPONIBLES A TRAVES DE DISPOSITIVOS MOVILES COMO TABLET, O MONITORES.*/
 
 for(var i=1;i<=15;i++){
     //Estrategias
@@ -145,7 +186,7 @@ for(var i=1;i<=15;i++){
     check.setAttribute("class", "checkbox");
 
     var label = document.createElement("LABEL");
-    var texto = document.createTextNode("OE "+i);
+    var texto = document.createTextNode("OE"+i+": "+oe[i-1]);
     var salto = document.createElement("BR");
     
     var x = document.createElement("INPUT");
@@ -168,7 +209,7 @@ for(var i=1;i<=20;i++){
     check.setAttribute("class", "checkbox");
 
     var label = document.createElement("LABEL");
-    var texto = document.createTextNode("P "+i);
+    var texto = document.createTextNode("P "+i+": "+pr[i-1]);
     var salto = document.createElement("BR");
     
     var x = document.createElement("INPUT");
