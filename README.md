@@ -1,4 +1,4 @@
 # dypes
 Dirección y Planeamiento Estratégico
 
-![Alt text](https://raw.githubusercontent.com/JWLsoft/dypes/master/Matriz PETI.png)
+![Alt text](https://raw.githubusercontent.com/JWLsoft/dypes/master/MatrizPETI.png)
