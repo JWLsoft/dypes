@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Matriz PETI</title>
+  <title>Portal Estratégico</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -11,7 +11,7 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="/bower_components/Ionicons/css/ionicons.min.css">
+  <!-- <link rel="stylesheet" href="/bower_components/Ionicons/css/ionicons.min.css"> -->
   <!-- DataTables -->
   <link rel="stylesheet" href="bower_components/datatables/datatables.min.css">
   <!-- Select2 -->
@@ -58,11 +58,11 @@
     <!-- Main content -->
     <section class="content">
 
-      <div class="row">
+      <div class="row" >
         <div class='col-xs-12'>
           <div class="box box-warning">
             <div class="box-header">
-              <h3 class="box-title">Matriz PETI</h3>
+              <h3 class="box-title">PORTAL ESTRATÉGICO</h3>
             </div>
             <!-- /.box-header -->
             <!-- Loading (remove the following to stop the loading)-->
@@ -71,27 +71,8 @@
             </div>
             <!-- end loading -->
             <div class="box-body">
-				<div class="col-md-4">
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Objetivos Estrategicos</th>
-                                <th>Proyectos</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><div id="estrategias"></div></td>
-                                <td><div id="proyectos"></div></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-md-8">
-                    <div id="tabla-resultado">
-                
-                    </div>
-                </div>
+              <a href="op1.html"><button class="btn btn-success col-md-6" style="height:800px"><h1>PLAN ESTRATÉGICO DE<br> TECNOLOGÍAS DE LA INFORMACIÓN</h1></button></a>
+              <a href="op2.html"><button class="btn btn-danger col-md-6" style="height:800px"><h1>CATÁLOGO DE <br>SERVICIOS ITIL</h1></button></a>
             </div>
             <!-- /.box-body -->
             <div class="box-footer">
@@ -135,198 +116,6 @@
 $('.select2').select2({
   tags: true
 });
-
-var oe=["CREAR SUCURSALES EN DISTINTAS UNIVERSIDADES","APLICAR LA RESPONSABILIDAD SOCIAL","MANTENER EL CRECIMIENTO ECONOMICO DE LA EMPRESA","AMPLIAR LA OFERTA DE PRODUCTOS Y SERVICIOS","MEJORAR LA CAPACIDAD OPERATIVA","DISMINUIR EL TIEMPO DE ESPERA DE LOS CLIENTES.","AUMENTAR LAS OPCIONES DE COMPRA DE LOS CLIENTES.","OBTENER CONFIANZA  DE LOS CLIENTES PARA CONSEGUIR FIDELIZARLOS.","INFORMAR A LOS CLIENTES LA CANTIDAD DE PRODUCTOS EN STOCK.","MANTENER UN CONTROL AUTOMATIZADO DEL INVENTARIO.","CONSERVAR UN BUEN AMBIENTE LABORAL Y ESPIRITU DE TRABAJO.","CONSERVAR DE UNA MEJOR MANERA LOS INSUMOS PERECIBLES.","LOGRAR FIDELIZAR A NUESTROS PROVEEDORES.","DAR A CONOCER LAS OFERTAS DEL NEGOCIO.","DIFERENCIACIÓN DE LOS COMPETIDORES."];
-var pr=["DESARROLLAR UN PLAN DE INVERSIONES PARA CREAR SUCURSALES DE LA CAFETERIA EN OTRAS UNIVERSIDADES","DISEÑAR UNA NUEVA CARTA (MENÚ), EN FUNCION A LAS NECESIDADES DEL CLIENTE","CONSEGUIR PATROCINADORES","PROMOCIONAR LOS PRODUCTOS YA EXISTENTES","CREAR LOS LINEAMIENTOS NECESARIOS PARA APLICAR LA RESPONSABILIDAD SOCIAL DE LA EMPRESA","PONER EN PRACTICA LOS LINEAMIENTOS DISEÑADOS","CREAR UN PROGRAMA QUE INCREMENTE EL INGRESO DE LA EMPRESA SIN DESCUIDAR SU ROL SOCIAL","RACIONALIZAR LOS COSTOS OPERATIVOS","EMPLEAR EFICAZMENTE LA GESTION DE LOS RECURSOS","EVALUAR LOS CONVENIOS CON LOS PATROCINADORES","OPTIMIZAR LA VENTA DE PRODUCTOS Y SERVICIOS EXISTENTES","RENTABILZIAR LOS CONVENIOS CON LOS PATROCINADORES","IMPLEMENTAR TARJETA PROPIA DE LA EMPRESA (CAFETERIA)","REMODELAR LA CAFETERIA","CAPACITACION AL PERSONAL QUE LABORA EN LAS SEDES DE LA CAFETERIA","REALIZAR ESTUDIOS E IMPLEMENTAR UN SISTEMA QUE AGILICE LAS COLAS","IMPLEMENTAR DISPOSITIVOS QUE AGILICEN EL PROCESO DE COMPRA (TABLET, ETC)","IMPLEMENTAR VARIOS MODULOS APTOS PARA EL USO DE DISPOSITIVOS MOVILES QUE SIRVEN EN EL PROCESO DE COMPRA.","MOSTRAR EL MENU DEL DIA O ALGUN PRODUCTO NUEVO EN PANTALLAS AL INTERIOR DE LA CAFETERIA.","OFRECERLES UN TICKET CON DATOS DE LA COMPRA REALIZADA, SOLICITANDO SU NOMBRE PARA QUE PUEDA SER UBICADO AL MOMENTO DE LA ENTREGA.","IMPLEMENTAR CARTILLAS O INFORMACION DE PRODUCTOS DISPONIBLES A TRAVES DE DISPOSITIVOS MOVILES COMO TABLET, O MONITORES."]
-/*OBJ: crear sucursales en distintas universidades
-- desarrollar un plan de inversiones para crear sucursales de la cafeteria en otras universidades
-- diseñar una nueva carta (menú), en funcion a las necesidades del cliente
-- conseguir patrocinadores
-- promocionar los productos ya existentes
-
-OBJ: Aplicar la responsabilidad social
-- Crear los lineamientos necesarios para aplicar la responsabilidad social de la empresa
-- poner en practica los lineamientos diseñados
-
-OBJ: Mantener el crecimiento economico de la empresa
-- Crear un programa que incremente el ingreso de la empresa sin descuidar su rol social.
-- racionalizar los costos operativos
-- emplear eficazmente la gestion de los recursos
-- Evaluar los convenios con los patrocinadores
-
-OBJ: ampliar la oferta de productos y servicios
-- optimizar la venta de productos y servicios existentes
-- rentabilziar los convenios con los patrocinadores
-- implementar tarjeta propia de la empresa (cafeteria)
-
-obj: mejorar la capacidad operativa
-- remodelar la cafeteria
-- capacitacion al personal que labora en las sedes de la cafeteria
-- realizar estudios e implementar un sistema que agilice las colas
-ESTRATEGIAS:
-
-- DISMINUIR EL TIEMPO DE ESPERA DE LOS CLIENTES. 
-- AUMENTAR LAS OPCIONES DE COMPRA DE LOS CLIENTES.
-- OBTENER CONFIANZA  DE LOS CLIENTES PARA CONSEGUIR FIDELIZARLOS.
-- INFORMAR A LOS CLIENTES LA CANTIDAD DE PRODUCTOS EN STOCK.
-
-
-PROYECTOS:
-- IMPLEMENTAR DISPOSITIVOS QUE AGILICEN EL PROCESO DE COMPRA (TABLET, ETC)
-- IMPLEMENTAR VARIOS MODULOS APTOS PARA EL USO DE DISPOSITIVOS MOVILES QUE SIRVEN EN EL PROCESO DE COMPRA.
-- MOSTRAR EL MENU DEL DIA O ALGUN PRODUCTO NUEVO EN PANTALLAS AL INTERIOR DE LA CAFETERIA.
-- OFRECERLES UN TICKET CON DATOS DE LA COMPRA REALIZADA, SOLICITANDO SU NOMBRE PARA QUE PUEDA SER UBICADO AL MOMENTO DE LA ENTREGA.
-- IMPLEMENTAR CARTILLAS O INFORMACION DE PRODUCTOS DISPONIBLES A TRAVES DE DISPOSITIVOS MOVILES COMO TABLET, O MONITORES.*/
-
-for(var i=1;i<=15;i++){
-    //Estrategias
-    var form = document.createElement("DIV");
-    form.setAttribute("class", "form-group");
-    var check = document.createElement("DIV");
-    check.setAttribute("class", "checkbox");
-
-    var label = document.createElement("LABEL");
-    var texto = document.createTextNode("OE"+i+": "+oe[i-1]);
-    var salto = document.createElement("BR");
-    
-    var x = document.createElement("INPUT");
-    x.setAttribute("type", "checkbox");
-    x.setAttribute("class", "estrategias");
-    x.setAttribute("value", "E"+i);
-    x.setAttribute("onclick", "genera_tabla()");
-
-    label.appendChild(x);
-    label.appendChild(texto);
-    check.appendChild(label);
-    form.appendChild(check);
-    document.getElementById("estrategias").appendChild(form);
-}
-for(var i=1;i<=20;i++){
-    // Proyectos
-    var form = document.createElement("DIV");
-    form.setAttribute("class", "form-group");
-    var check = document.createElement("DIV");
-    check.setAttribute("class", "checkbox");
-
-    var label = document.createElement("LABEL");
-    var texto = document.createTextNode("P "+i+": "+pr[i-1]);
-    var salto = document.createElement("BR");
-    
-    var x = document.createElement("INPUT");
-    x.setAttribute("type", "checkbox");
-    x.setAttribute("class", "proyectos");
-    x.setAttribute("value", "P"+i);
-    x.setAttribute("onclick", "genera_tabla()");
-
-    label.appendChild(x);
-    label.appendChild(texto);
-    check.appendChild(label);
-    form.appendChild(check);
-    document.getElementById("proyectos").appendChild(form);
-}
-
-function genera_tabla() {
-    document.getElementById('tabla-resultado').innerHTML='';
-    var e = document.getElementsByClassName("estrategias");
-    var p = document.getElementsByClassName("proyectos");
-  // Obtener la referencia del elemento body
-  var body = document.getElementById('tabla-resultado');//document.getElementsByTagName("body")[0];
- 
-  // Crea un elemento <table> y un elemento <tbody>
-  var tabla   = document.createElement("table");
-  tabla.setAttribute("class", "table table-bordered table-hover");
-  var tblBody = document.createElement("tbody");
-  var tblHead = document.createElement("thead");
-
-    var cabecera=false;
-    var hilera = document.createElement("tr");
-    for (var j = 0; j < p.length; j++) {
-        if(!cabecera){
-            // Crea un elemento <td> y un nodo de texto, haz que el nodo de
-            // texto sea el contenido de <td>, ubica el elemento <td> al final
-            // de la hilera de la tabla
-            var celda = document.createElement("th");
-            var textoCelda = document.createTextNode("OE / P");
-            celda.appendChild(textoCelda);
-            hilera.appendChild(celda);
-            cabecera=true;
-        }
-        if(p[j].checked){
-            // Crea un elemento <td> y un nodo de texto, haz que el nodo de
-            // texto sea el contenido de <td>, ubica el elemento <td> al final
-            // de la hilera de la tabla
-            var celda = document.createElement("th");
-            var y = j+1;
-            var textoCelda = document.createTextNode("P "+y);
-            celda.appendChild(textoCelda);
-            hilera.appendChild(celda);
-        }
-    }
-
-    // agrega la hilera al final de la tabla (al final del elemento tblbody)
-    tblHead.appendChild(hilera);
-  // Crea las celdas
-  for (var i = 0; i < e.length; i++) {
-      if(e[i].checked){
-        // Crea las hileras de la tabla
-        var hilera = document.createElement("tr");
-        // cabecera lateral
-        var celda = document.createElement("td");
-        var x = i+1;
-        var textoCelda = document.createTextNode("OE "+x);
-        celda.appendChild(textoCelda);
-        hilera.appendChild(celda);
-
-        for (var j = 0; j < p.length; j++) {
-            if(p[j].checked){
-                // Crea un elemento <td> y un nodo de texto, haz que el nodo de
-                // texto sea el contenido de <td>, ubica el elemento <td> al final
-                // de la hilera de la tabla
-                var celda = document.createElement("td");
-                var x = i+1;
-                var y = j+1;
-                //var textoCelda = document.createTextNode("E "+x+", P "+y);
-                var z = document.createElement("INPUT");
-                z.setAttribute("type", "checkbox");
-                z.setAttribute("value", "O"+x+"P"+y);
-                //celda.appendChild(textoCelda);
-                celda.appendChild(z);
-                hilera.appendChild(celda);
-            }
-        }
-
-        // agrega la hilera al final de la tabla (al final del elemento tblbody)
-        tblBody.appendChild(hilera);
-      }
-  }
-  tabla.appendChild(tblHead);
-  // posiciona el <tbody> debajo del elemento <table>
-  tabla.appendChild(tblBody);
-  // appends <table> into <body>
-  body.appendChild(tabla);
-  // modifica el atributo "border" de la tabla y lo fija a "2";
-  //tabla.setAttribute("border", "2");
-}
-
-
-
-// Data Tables
-/*$(function () {
-  $('#example1').DataTable({
-    select:false,
-    //dom: 'Bfrtip',
-    buttons: [
-        'copy',
-        'excel',
-        'csv',
-        'pdf',
-        'print',
-        'colvis',
-        'colvisRestore',
-        'pageLength'
-    ],
-  })
-})*/
 
 </script>
 </body>
