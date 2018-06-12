@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Triángulo LM</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <!-- <link rel="stylesheet" href="/bower_components/Ionicons/css/ionicons.min.css"> -->
+  <!-- DataTables -->
+  <link rel="stylesheet" href="bower_components/datatables/datatables.min.css">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="bower_components/select2/dist/css/select2.min.css">
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Google Font -->
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+</head>
+<body class="hold-transition skin-yellow-light sidebar-collapse">
+<div class="wrapper">
+
+  <header class="main-header">
+    <!-- Logo -->
+    <a class="logo" href="index.html">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>J</b>WL</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>DYPES</b>UPN</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+
+    </nav>
+  </header>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+
+    <!-- Main content -->
+    <section class="content">
+
+      <div class="row">
+        <div class='col-xs-12'>
+          <div class="box box-warning">
+            <div class="box-header">
+              <h3 class="box-title">TRIÁNGULO DE LOS LÍDERES DEL MERCADO</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- Loading (remove the following to stop the loading)-->
+            <div class="overlay" id="loading-pane" hidden="true">
+              <i class="fa fa-refresh fa-spin"></i>
+            </div>
+            <!-- end loading -->
+            <div class="box-body">
+                <div class="col-md-6">
+                    <canvas id="canvas"></canvas>
+                </div>
+				<div class="col-md-6">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Liderazgo en Producto</th>
+                                <th>Intimidad con los Clientes</th>
+                                <th>Excelencia Operativa</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input onchange="actualizarData()" type="number" class="puntajes" class="form-control" id="LP" value="0"/></td>
+                                <td><input onchange="actualizarData()" type="number" class="puntajes" class="form-control" id="IC" value="0"/></td>
+                                <td><input onchange="actualizarData()" type="number" class="puntajes" class="form-control" id="EO" value="0"/></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer" hidden>
+                <button id="randomizeData">Randomize Data</button>
+                <button id="addDataset">Add Dataset</button>
+                <button id="removeDataset">Remove Dataset</button>
+                <button id="addData">Add Data</button>
+                <button id="removeData">Remove Data</button>
+            </div>
+          </div>
+          <!-- /.box -->
+        </div>
+      </div>
+      <!-- /. row -->
+    </section>
+    <!-- /.content -->
+  </div>
+
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 1.0.0
+    </div>
+    <strong>Copyright &copy; 2018 <a href="https://github.com/JWLsoft">JWL</a>.</strong> All rights
+    reserved.
+  </footer>
+
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 3 -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="bower_components/datatables/datatables.min.js"></script>
+<!-- Select2 -->
+<script src="bower_components/select2/dist/js/select2.full.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+<!--Chart.js-->
+<script src="bower_components/chart.js/Chart.bundle.js"></script>
+<script src="bower_components/chart.js/samples/utils.js"></script>
+<!-- page script -->
+<script>
+var randomScalingFactor = function() {
+    return Math.round(Math.random() * 100);
+};
+
+var color = Chart.helpers.color;
+var config = {
+    type: 'radar',
+    data: {
+        labels: ['LP', 'IC', 'EO'],
+        datasets: [{
+            label: 'Puntaje',
+            backgroundColor: color(window.chartColors.red).alpha(0.2).rgbString(),
+            borderColor: window.chartColors.red,
+            pointBackgroundColor: window.chartColors.red,
+            data: [
+                0,0,0/*randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor()*/
+            ]
+        }]
+    },
+    options: {
+        legend: {
+            position: 'top',
+        },
+        title: {
+            display: true,
+            text: 'Triangulo de los Lideres del Mercado'
+        },
+        scale: {
+            ticks: {
+                beginAtZero: true
+            }
+        }
+    }
+};
+
+window.onload = function() {
+    window.myRadar = new Chart(document.getElementById('canvas'), config);
+};
+
+document.getElementById('randomizeData').addEventListener('click', function() {
+    config.data.datasets.forEach(function(dataset) {
+        dataset.data = dataset.data.map(function() {
+            return randomScalingFactor();
+        });
+    });
+
+    window.myRadar.update();
+});
+
+var colorNames = Object.keys(window.chartColors);
+document.getElementById('addDataset').addEventListener('click', function() {
+    var colorName = colorNames[config.data.datasets.length % colorNames.length];
+    var newColor = window.chartColors[colorName];
+
+    var newDataset = {
+        label: 'Dataset ' + config.data.datasets.length,
+        borderColor: newColor,
+        backgroundColor: color(newColor).alpha(0.2).rgbString(),
+        pointBorderColor: newColor,
+        data: [],
+    };
+
+    for (var index = 0; index < config.data.labels.length; ++index) {
+        newDataset.data.push(randomScalingFactor());
+    }
+
+    config.data.datasets.push(newDataset);
+    window.myRadar.update();
+});
+
+document.getElementById('addData').addEventListener('click', function() {
+    if (config.data.datasets.length > 0) {
+        config.data.labels.push('dataset #' + config.data.labels.length);
+
+        config.data.datasets.forEach(function(dataset) {
+            dataset.data.push(randomScalingFactor());
+        });
+
+        window.myRadar.update();
+    }
+});
+
+document.getElementById('removeDataset').addEventListener('click', function() {
+    config.data.datasets.splice(0, 1);
+    window.myRadar.update();
+});
+
+document.getElementById('removeData').addEventListener('click', function() {
+    config.data.labels.pop(); // remove the label first
+
+    config.data.datasets.forEach(function(dataset) {
+        dataset.data.pop();
+    });
+
+    window.myRadar.update();
+});
+
+function eliminarData(){
+    config.data.labels.pop(); // remove the label first
+
+    config.data.datasets.forEach(function(dataset) {
+        dataset.data.pop();
+    });
+
+    window.myRadar.update();
+}
+// LLenar Charts
+
+
+
+function actualizarData(){
+    eliminarData();
+    eliminarData();
+    eliminarData();
+
+    var porClassName=document.getElementsByClassName("puntajes");
+    //var serie = [{name:'',data:[]}];
+    var categoria = [];
+    var datos = [];
+    for (var i = 0; i < porClassName.length; i++) {
+        var valor = porClassName[i].value;
+        var nombre = porClassName[i].id;
+        config.data.labels.push(nombre);
+
+        categoria[i] = nombre;
+        datos[i] = valor;
+        for (var index = 0; index < config.data.datasets.length; ++index) {
+            // window.myBar.addData(randomScalingFactor(), index);
+            config.data.datasets[index].data.push(valor);
+        }
+        window.myRadar.update();
+    }
+}
+
+</script>
+</body>
+</html>
