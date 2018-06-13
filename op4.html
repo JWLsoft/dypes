@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>MPEC</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <!-- <link rel="stylesheet" href="/bower_components/Ionicons/css/ionicons.min.css"> -->
+  <!-- DataTables -->
+  <link rel="stylesheet" href="bower_components/datatables/datatables.min.css">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="bower_components/select2/dist/css/select2.min.css">
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Google Font -->
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+</head>
+<body class="hold-transition skin-yellow-light sidebar-collapse">
+<div class="wrapper">
+
+  <header class="main-header">
+    <!-- Logo -->
+    <a class="logo" href="index.html">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>J</b>WL</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>DYPES</b>UPN</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+
+    </nav>
+  </header>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+
+    <!-- Main content -->
+    <section class="content">
+
+      <div class="row">
+        <div class='col-xs-12'>
+          <div class="box box-warning">
+            <div class="box-header">
+              <h3 class="box-title">MATRIZ DE PLANEACIÓN ESTRATÉGICA CUANTITATIVA</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- Loading (remove the following to stop the loading)-->
+            <div class="overlay" id="loading-pane" hidden="true">
+              <i class="fa fa-refresh fa-spin"></i>
+            </div>
+            <!-- end loading -->
+            <div class="box-body">
+				<div class="col-md-12">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th colspan="2">Factores</th>
+                                <th>Peso</th>
+                                <th colspan="2">E1</th>
+                                <th colspan="2">E2</th>
+                                <th colspan="2">E3</th>
+                                <th colspan="2">E4</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="3">Oportunidades</td>
+                                <td>PA</td>
+                                <td>PTA</td>
+                                <td>PA</td>
+                                <td>PTA</td>
+                                <td>PA</td>
+                                <td>PTA</td>
+                                <td>PA</td>
+                                <td>PTA</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Amplio mercado</td>
+                                <td><input type="number" class="form-control" id="PO1" value="0.1" disabled/></td>
+                                <td><input onchange="actualizarData('O11')" type="number" class="form-control" id="PAO11" value="0"/></td>
+                                <td><input type="number" class="form-control puntajes" id="PTAO11" value="0" disabled/></td>
+                                <td><input onchange="actualizarData('O12')" type="number" class="form-control" id="PAO12" value="0"/></td>
+                                <td><input type="number" class="form-control" id="PTAO12" value="0" disabled/></td>
+                                <td><input onchange="actualizarData('O13')" type="number" class="form-control" id="PAO13" value="0"/></td>
+                                <td><input type="number" class="form-control" id="PTAO13" value="0" disabled/></td>
+                                <td><input onchange="actualizarData('O14')" type="number" class="form-control" id="PAO14" value="0"/></td>
+                                <td><input type="number" class="form-control" id="PTAO14" value="0" disabled/></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Posibilidad de diversificación</td>
+                                <td><input type="number" class="form-control" id="PO2" value="0.05" disabled/></td>
+                                <td><input onchange="actualizarData('O21')" type="number" class="form-control" id="PAO21" value="0"/></td>
+                                <td><input type="number" class="form-control puntajes" id="PTAO21" value="0" disabled/></td>
+                                <td><input onchange="actualizarData('O22')" type="number" class="form-control" id="PAO22" value="0"/></td>
+                                <td><input type="number" class="form-control" id="PTAO22" value="0" disabled/></td>
+                                <td><input onchange="actualizarData('O23')" type="number" class="form-control" id="PAO23" value="0"/></td>
+                                <td><input type="number" class="form-control" id="PTAO23" value="0" disabled/></td>
+                                <td><input onchange="actualizarData('O24')" type="number" class="form-control" id="PAO24" value="0"/></td>
+                                <td><input type="number" class="form-control" id="PTAO24" value="0" disabled/></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Posibles alianzas estratégicas</td>
+                                <td><input type="number" class="form-control" id="PO3" value="0.1" disabled/></td>
+                                <td><input onchange="actualizarData('O31')" type="number" class="form-control" id="PAO31" value="0"/></td>
+                                <td><input type="number" class="form-control puntajes" id="PTAO31" value="0" disabled/></td>
+                                <td><input onchange="actualizarData('O32')" type="number" class="form-control" id="PAO32" value="0"/></td>
+                                <td><input type="number" class="form-control" id="PTAO32" value="0" disabled/></td>
+                                <td><input onchange="actualizarData('O33')" type="number" class="form-control" id="PAO33" value="0"/></td>
+                                <td><input type="number" class="form-control" id="PTAO33" value="0" disabled/></td>
+                                <td><input onchange="actualizarData('O34')" type="number" class="form-control" id="PAO34" value="0"/></td>
+                                <td><input type="number" class="form-control" id="PTAO34" value="0" disabled/></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Alcanzar certificaciones de calidad</td>
+                                <td><input type="number" class="form-control" id="PO4" value="0.05" disabled/></td>
+                                <td><input onchange="actualizarData('O41')" type="number" class="form-control" id="PAO41" value="0"/></td>
+                                <td><input type="number" class="form-control puntajes" id="PTAO41" value="0" disabled/></td>
+                                <td><input onchange="actualizarData('O42')" type="number" class="form-control" id="PAO42" value="0"/></td>
+                                <td><input type="number" class="form-control" id="PTAO42" value="0" disabled/></td>
+                                <td><input onchange="actualizarData('O43')" type="number" class="form-control" id="PAO43" value="0"/></td>
+                                <td><input type="number" class="form-control" id="PTAO43" value="0" disabled/></td>
+                                <td><input onchange="actualizarData('O44')" type="number" class="form-control" id="PAO44" value="0"/></td>
+                                <td><input type="number" class="form-control" id="PTAO44" value="0" disabled/></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Buenos canales con los proveedores</td>
+                                <td><input type="number" class="form-control" id="PO5" value="0.1" disabled/></td>
+                                <td><input onchange="actualizarData('O51')" type="number" class="form-control" id="PAO51" value="0"/></td>
+                                <td><input type="number" class="form-control puntajes" id="PTAO51" value="0" disabled/></td>
+                                <td><input onchange="actualizarData('O52')" type="number" class="form-control" id="PAO52" value="0"/></td>
+                                <td><input type="number" class="form-control" id="PTAO52" value="0" disabled/></td>
+                                <td><input onchange="actualizarData('O53')" type="number" class="form-control" id="PAO53" value="0"/></td>
+                                <td><input type="number" class="form-control" id="PTAO53" value="0" disabled/></td>
+                                <td><input onchange="actualizarData('O54')" type="number" class="form-control" id="PAO54" value="0"/></td>
+                                <td><input type="number" class="form-control" id="PTAO54" value="0" disabled/></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Negociacion con los proveedores</td>
+                                <td><input type="number" class="form-control" id="PO6" value="0.1" disabled/></td>
+                                <td><input onchange="actualizarData('O61')" type="number" class="form-control" id="PAO61" value="0"/></td>
+                                <td><input type="number" class="form-control puntajes" id="PTAO61" value="0" disabled/></td>
+                                <td><input onchange="actualizarData('O62')" type="number" class="form-control" id="PAO62" value="0"/></td>
+                                <td><input type="number" class="form-control" id="PTAO62" value="0" disabled/></td>
+                                <td><input onchange="actualizarData('O63')" type="number" class="form-control" id="PAO63" value="0"/></td>
+                                <td><input type="number" class="form-control" id="PTAO63" value="0" disabled/></td>
+                                <td><input onchange="actualizarData('O64')" type="number" class="form-control" id="PAO64" value="0"/></td>
+                                <td><input type="number" class="form-control" id="PTAO64" value="0" disabled/></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">TOTAL</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">Amenazas</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Surgimiento de nuevos competidores</td>
+                                <td><input type="number" class="form-control" id="PA1" value="0.1" disabled/></td>
+                                <td><input onchange="actualizarData('A11')" type="number" class="form-control" id="PAA11" value="0"/></td>
+                                <td><input type="number" class="form-control puntajes" id="PTAA11" value="0" disabled/></td>
+                                <td><input onchange="actualizarData('A12')" type="number" class="form-control" id="PAA12" value="0"/></td>
+                                <td><input type="number" class="form-control" id="PTAA12" value="0" disabled/></td>
+                                <td><input onchange="actualizarData('A13')" type="number" class="form-control" id="PAA13" value="0"/></td>
+                                <td><input type="number" class="form-control" id="PTAA13" value="0" disabled/></td>
+                                <td><input onchange="actualizarData('A14')" type="number" class="form-control" id="PAA14" value="0"/></td>
+                                <td><input type="number" class="form-control" id="PTAA14" value="0" disabled/></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Alza de precios en el mercado</td>
+                                <td><input type="number" class="form-control" id="PA2" value="0.1" disabled/></td>
+                                <td><input onchange="actualizarData('A21')" type="number" class="form-control" id="PAA21" value="0"/></td>
+                                <td><input type="number" class="form-control puntajes" id="PTAA21" value="0" disabled/></td>
+                                <td><input onchange="actualizarData('A22')" type="number" class="form-control" id="PAA22" value="0"/></td>
+                                <td><input type="number" class="form-control" id="PTAA22" value="0" disabled/></td>
+                                <td><input onchange="actualizarData('A23')" type="number" class="form-control" id="PAA23" value="0"/></td>
+                                <td><input type="number" class="form-control" id="PTAA23" value="0" disabled/></td>
+                                <td><input onchange="actualizarData('A24')" type="number" class="form-control" id="PAA24" value="0"/></td>
+                                <td><input type="number" class="form-control" id="PTAA24" value="0" disabled/></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Competiores con mejores precios</td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control puntajes" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Saturación del mercado</td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control puntajes" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Cambios en las condiciones políticas y económicas del país</td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control puntajes" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Consumidor con preferencias cambiantes</td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control puntajes" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">TOTAL</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">Fortalezas</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Productos de calidad</td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control puntajes" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Clientela fija</td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control puntajes" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Capacitación continua</td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control puntajes" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Infraestructura moderna</td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control puntajes" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Servicio acogedor</td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control puntajes" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Instalaciones limpias y saludables</td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control puntajes" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">TOTAL</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">Debilidades</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Precios poco accesibles</td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control puntajes" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Poca iniciativa de innovación</td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control puntajes" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Infraestructura insuficiente</td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control puntajes" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Ambiente laboral deficiente</td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control puntajes" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Personal sin experiencia en trato al cliente</td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control puntajes" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Baja demanda en vacaciones</td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control puntajes" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                                <td><input onchange="actualizarData()" type="number" class="form-control" id="LP" value="0"/></td>
+                                <td><input type="number" class="form-control" id="LP" value="0" disabled/></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">TOTAL</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class="success">Suma del puntaje total del grado de atración</td>
+                                <td><input type="number" class="form-control" id="S1" value="0" disabled/></td>
+                                <td></td>
+                                <td><input type="number" class="form-control" id="S2" value="0" disabled/></td>
+                                <td></td>
+                                <td><input type="number" class="form-control" id="S3" value="0" disabled/></td>
+                                <td></td>
+                                <td><input type="number" class="form-control" id="S4" value="0" disabled/></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+            </div>
+          </div>
+          <!-- /.box -->
+        </div>
+      </div>
+      <!-- /. row -->
+    </section>
+    <!-- /.content -->
+  </div>
+
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 1.0.0
+    </div>
+    <strong>Copyright &copy; 2018 <a href="https://github.com/JWLsoft">JWL</a>.</strong> All rights
+    reserved.
+  </footer>
+
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 3 -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="bower_components/datatables/datatables.min.js"></script>
+<!-- Select2 -->
+<script src="bower_components/select2/dist/js/select2.full.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+<!--Chart.js-->
+<script src="bower_components/chart.js/Chart.bundle.js"></script>
+<script src="bower_components/chart.js/samples/utils.js"></script>
+<!-- page script -->
+<script>
+function actualizarData(id = ''){
+    var peso = document.getElementById('P'+id.substring(2,0));
+    var pa = document.getElementById('PA'+id);
+    var pta = document.getElementById('PTA'+id);
+
+    pta.value = peso.value*pa.value;
+
+    var porClassName = document.getElementsByClassName("puntajes");
+    var suma=0;
+    for(var i=0; i<= porClassName.length;i++){
+        suma = suma+porClassName[i].value;
+    }
+    alert(suma);
+    document.getElementById('S1').value=suma;
+}
+
+</script>
+</body>
+</html>
