@@ -131,6 +131,8 @@
 <script src="dist/js/demo.js"></script>
 <!-- page script -->
 <script>
+
+
 //Initialize Select2 Elements
 $('.select2').select2({
   tags: true
@@ -303,10 +305,23 @@ function genera_tabla() {
   tabla.appendChild(tblHead);
   // posiciona el <tbody> debajo del elemento <table>
   tabla.appendChild(tblBody);
+  tabla.setAttribute('id','example1');
   // appends <table> into <body>
   body.appendChild(tabla);
   // modifica el atributo "border" de la tabla y lo fija a "2";
   //tabla.setAttribute("border", "2");
+  // Data Tables
+  $(function () {
+    $('#example1').DataTable({
+      select:false,
+      'paging': false,
+      'searching'   : false,
+      dom: 'Bfrtip',
+      buttons: [
+          'copy', 'excel', 'pdf'
+      ]
+    })
+  })
 }
 
 
